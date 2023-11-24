@@ -719,6 +719,7 @@
             this.guna2Button2.Size = new System.Drawing.Size(63, 37);
             this.guna2Button2.TabIndex = 0;
             this.guna2Button2.Text = "Log";
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // panel11
             // 
