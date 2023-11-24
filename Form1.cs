@@ -91,5 +91,45 @@ namespace Wer_wird_Millionear_zwei
         {
 
         }
+
+        private void label23_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label28_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void progressBar4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void progressBar3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label24_Click(object sender, EventArgs e)
+        {
+            //fdas
+        }
     }
 }
