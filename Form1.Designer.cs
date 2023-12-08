@@ -92,8 +92,8 @@
             this.label30 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.guna2ShadowPanel1.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -262,6 +262,7 @@
             this.Aoption.TabIndex = 1;
             this.Aoption.Text = "guna2CircleButton1";
             this.Aoption.UseTransparentBackground = true;
+            this.Aoption.Click += new System.EventHandler(this.Aoption_Click);
             // 
             // Boption
             // 
@@ -281,7 +282,7 @@
             this.Boption.TabIndex = 2;
             this.Boption.Text = "guna2CircleButton2";
             this.Boption.UseTransparentBackground = true;
-            this.Boption.Click += new System.EventHandler(this.Boption_Click);
+            this.Boption.Click += new System.EventHandler(this.Boption_Click_1);
             // 
             // Coption
             // 
@@ -301,6 +302,7 @@
             this.Coption.TabIndex = 3;
             this.Coption.Text = "guna2CircleButton3";
             this.Coption.UseTransparentBackground = true;
+            this.Coption.Click += new System.EventHandler(this.Coption_Click);
             // 
             // Doption
             // 
@@ -320,6 +322,7 @@
             this.Doption.TabIndex = 4;
             this.Doption.Text = "guna2CircleButton4";
             this.Doption.UseTransparentBackground = true;
+            this.Doption.Click += new System.EventHandler(this.Doption_Click);
             // 
             // guna2ShadowPanel1
             // 
@@ -608,6 +611,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox2
             // 
@@ -619,6 +623,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox3
             // 
@@ -630,6 +635,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 8;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // panelPhone
             // 
@@ -642,6 +648,7 @@
             this.panelPhone.Name = "panelPhone";
             this.panelPhone.Size = new System.Drawing.Size(208, 172);
             this.panelPhone.TabIndex = 11;
+            this.panelPhone.Visible = false;
             // 
             // label25
             // 
@@ -652,6 +659,7 @@
             this.label25.Size = new System.Drawing.Size(25, 13);
             this.label25.TabIndex = 3;
             this.label25.Text = "<<<";
+            this.label25.Click += new System.EventHandler(this.label25_Click);
             // 
             // guna2Button4
             // 
@@ -668,6 +676,7 @@
             this.guna2Button4.Size = new System.Drawing.Size(148, 40);
             this.guna2Button4.TabIndex = 2;
             this.guna2Button4.Text = "Kevin";
+            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
             // guna2Button3
             // 
@@ -724,6 +733,7 @@
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.panel11.Controls.Add(this.label26);
             this.panel11.Controls.Add(this.guna2Button5);
             this.panel11.Controls.Add(this.label35);
             this.panel11.Controls.Add(this.label34);
@@ -737,7 +747,6 @@
             this.panel11.Controls.Add(this.label30);
             this.panel11.Controls.Add(this.label29);
             this.panel11.Controls.Add(this.label28);
-            this.panel11.Controls.Add(this.label26);
             this.panel11.Location = new System.Drawing.Point(14, 435);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(208, 172);
@@ -758,6 +767,7 @@
             this.guna2Button5.Size = new System.Drawing.Size(148, 40);
             this.guna2Button5.TabIndex = 4;
             this.guna2Button5.Text = "ASK";
+            this.guna2Button5.Click += new System.EventHandler(this.guna2Button5_Click);
             // 
             // label35
             // 
@@ -878,16 +888,6 @@
             this.label28.Text = "A";
             this.label28.Click += new System.EventHandler(this.label28_Click);
             // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.BackColor = System.Drawing.Color.Transparent;
-            this.label26.Location = new System.Drawing.Point(3, 24);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(25, 13);
-            this.label26.TabIndex = 3;
-            this.label26.Text = "<<<";
-            // 
             // label27
             // 
             this.label27.BackColor = System.Drawing.Color.Transparent;
@@ -896,6 +896,16 @@
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(203, 47);
             this.label27.TabIndex = 13;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(4, 14);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(25, 13);
+            this.label26.TabIndex = 16;
+            this.label26.Text = "<<<";
+            this.label26.Click += new System.EventHandler(this.label26_Click);
             // 
             // Form1
             // 
@@ -1006,7 +1016,6 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.ProgressBar progressBar4;
         private System.Windows.Forms.ProgressBar progressBar3;
@@ -1020,6 +1029,7 @@
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label26;
     }
 }
 
