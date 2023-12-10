@@ -9,11 +9,28 @@ using System.Threading.Tasks;
 using System.Web.UI.WebControls;
 using System.Windows.Forms;
 using Microsoft.Win32.SafeHandles;
+using NAudio.Wave;
 
 namespace Wer_wird_Millionear_zwei
 {
     public partial class Form1 : Form
     {
+        //Sound Test
+        static void Main()
+        {
+            string mp3FilePath = "\"C:\\Users\\moehr\\Downloads\\255067-8c9b67b0-44dc-40c1-8f2a-472f017b12ff.mp3\""; // Pfade und Dateinamen anpassen
+
+            using (var reader = new Mp3FileReader(mp3FilePath))
+            using (var waveOut = new WaveOutEvent())
+            {
+                waveOut.Init(reader);
+                waveOut.Play();
+
+                Console.WriteLine("Drücke Enter zum Beenden.");
+                Console.ReadLine();
+            }
+        }
+        //ende
         public Form1()
         {
             InitializeComponent();
@@ -138,6 +155,11 @@ namespace Wer_wird_Millionear_zwei
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
+            Aoption.FillColor = Color.DarkSlateGray;
+            Boption.FillColor = Color.DarkSlateGray;
+            Coption.FillColor = Color.DarkSlateGray;
+            Doption.FillColor = Color.DarkSlateGray;
+            label36.Visible = false;
             if (panel1.BackColor == Color.Transparent) //option fill color anpassen C richtig
             {
                 label24.Text = "Wie viele Kontinente gibt es auf der Erde?"; 
@@ -171,78 +193,78 @@ namespace Wer_wird_Millionear_zwei
 
             if (panel3.BackColor == Color.DarkOrange)  //option fill color anpassen,frage hinzufügen
             {
-                label24.Text = "Wofür ist der Ort Verdun in Frankreich bekannt?";
+                label24.Text = "Welches ist das chemische Symbol für Gold?";
                 label23.Text = "4";
-                Aoption.Text = "A) Verdun befindet sich in einer Wüste";
-                Boption.Text = "B) Großer Schauplatz im ersten Weltkrieg";
-                Coption.Text = "C) Die größten Menschen der Welt kommen aus Verdun";
-                Doption.Text = "D) Für seine historische Altstadt";
+                Aoption.Text = "A) AU";
+                Boption.Text = "B) Kg";
+                Coption.Text = "C) Gg";
+                Doption.Text = "D) Fr";
                 Doption.FillColor = Color.DarkSlateGray;
             }
 
             if (panel4.BackColor == Color.DarkOrange)  //option fill color anpassen,frage hinzufügen
             {
-                label24.Text = "Wofür ist der Ort Verdun in Frankreich bekannt?";
+                label24.Text = "Welches ist das älteste noch existierende Weltwunder der Antike?";
                 label23.Text = "5";
-                Aoption.Text = "A) Verdun befindet sich in einer Wüste";
-                Boption.Text = "B) Großer Schauplatz im ersten Weltkrieg";
-                Coption.Text = "C) Die größten Menschen der Welt kommen aus Verdun";
-                Doption.Text = "D) Für seine historische Altstadt";
+                Aoption.Text = "A) Pyramiden von Gizeh";
+                Boption.Text = "B) Zeusstatue des Phidias in Olympia";
+                Coption.Text = "C) Artemistempel in Ephesos";
+                Doption.Text = "D) Hängende Gärten von Babylon";
                 Doption.FillColor = Color.DarkSlateGray;
             }
 
             if (panel5.BackColor == Color.DarkOrange)  //option fill color anpassen,frage hinzufügen
             {
-                label24.Text = "Wofür ist der Ort Verdun in Frankreich bekannt?";
+                label24.Text = "Welcher Chemiker entdeckte das Element Radium und Polonium und prägte den Begriff \"Radioaktivität\"?";
                 label23.Text = "6";
-                Aoption.Text = "A) Verdun befindet sich in einer Wüste";
-                Boption.Text = "B) Großer Schauplatz im ersten Weltkrieg";
-                Coption.Text = "C) Die größten Menschen der Welt kommen aus Verdun";
-                Doption.Text = "D) Für seine historische Altstadt";
+                Aoption.Text = "A) Antoine Lavoisier";
+                Boption.Text = "B) Pascal Foeert";
+                Coption.Text = "C) Marie Curie ";
+                Doption.Text = "D) Ernest Rutherford";
                 Doption.FillColor = Color.DarkSlateGray;
             }
 
             if (panel6.BackColor == Color.DarkOrange)  //option fill color anpassen,frage hinzufügen
             {
-                label24.Text = "Wofür ist der Ort Verdun in Frankreich bekannt?";
+                label24.Text = "Welcher dieser Städte ist keine Hauptstadt?\r\n\r\n";
                 label23.Text = "7";
-                Aoption.Text = "A) Verdun befindet sich in einer Wüste";
-                Boption.Text = "B) Großer Schauplatz im ersten Weltkrieg";
-                Coption.Text = "C) Die größten Menschen der Welt kommen aus Verdun";
-                Doption.Text = "D) Für seine historische Altstadt";
+                Aoption.Text = "A) Kabul";
+                Boption.Text = "B) Jamestown";
+                Coption.Text = "C) Montevideo";
+                Doption.Text = "D) Iasi";
                 Doption.FillColor = Color.DarkSlateGray;
             }
 
             if (panel7.BackColor == Color.DarkOrange)  //option fill color anpassen,frage hinzufügen
             {
-                label24.Text = "Wofür ist der Ort Verdun in Frankreich bekannt?";
+                label24.Text = "Welches ist das am häufigsten vorkommende Gas in der Atmosphäre des Mars?";
                 label23.Text = "8";
-                Aoption.Text = "A) Verdun befindet sich in einer Wüste";
-                Boption.Text = "B) Großer Schauplatz im ersten Weltkrieg";
-                Coption.Text = "C) Die größten Menschen der Welt kommen aus Verdun";
-                Doption.Text = "D) Für seine historische Altstadt";
+                Aoption.Text = "A) Stickstoff";
+                Boption.Text = "B) Sauerstoff";
+                Coption.Text = "C) Kohlendioxid";
+                Doption.Text = "D) Methan";
                 Doption.FillColor = Color.DarkSlateGray;
             }
 
             if (panel8.BackColor == Color.DarkOrange)  //option fill color anpassen,frage hinzufügen
             {
-                label24.Text = "Wofür ist der Ort Verdun in Frankreich bekannt?";
+                label24.Text = "Welcher britische Philosoph und Ökonom verfasste das Werk \"An Inquiry into the Nature and Causes of the Wealth of Nations?";
                 label23.Text = "9";
-                Aoption.Text = "A) Verdun befindet sich in einer Wüste";
-                Boption.Text = "B) Großer Schauplatz im ersten Weltkrieg";
-                Coption.Text = "C) Die größten Menschen der Welt kommen aus Verdun";
-                Doption.Text = "D) Für seine historische Altstadt";
+                Aoption.Text = "A) John Locke";
+                Boption.Text = "B) David Hume";
+                Coption.Text = "C) Adam Smith";
+                Doption.Text = "D) Karl Marx";
                 Doption.FillColor = Color.DarkSlateGray;
             }
 
             if (panel9.BackColor == Color.DarkOrange)  //option fill color anpassen,frage hinzufügen
             {
-                label24.Text = "Wofür ist der Ort Verdun in Frankreich bekannt?";
+                label24.Text = "Wie viel Prozent der Maenlichen Bevölkerung von Paraguay starben im Tripel-Allianz-Krieg von 1864 bis 1870?";
                 label23.Text = "10";
-                Aoption.Text = "A) Verdun befindet sich in einer Wüste";
-                Boption.Text = "B) Großer Schauplatz im ersten Weltkrieg";
-                Coption.Text = "C) Die größten Menschen der Welt kommen aus Verdun";
-                Doption.Text = "D) Für seine historische Altstadt";
+                Aoption.Text = "A) 62%";
+                Boption.Text = "B) 74%";
+                Coption.Text = "C) 67%";
+                Doption.Text = "D) 70%";
                 Doption.FillColor = Color.DarkSlateGray;
             }
 
@@ -304,6 +326,7 @@ namespace Wer_wird_Millionear_zwei
             if(label23.Text=="2" ||label23.Text=="3")
             {
                 Boption.FillColor = Color.DarkGreen;
+                MessageBox.Show("Richtige Antwort, zum Fortfahren LOG drücken");
             }
             else
             {
@@ -316,6 +339,7 @@ namespace Wer_wird_Millionear_zwei
             if (label23.Text=="4" || label23.Text=="5")
             {
                 Aoption.FillColor = Color.DarkGreen;
+                MessageBox.Show("Richtige Antwort, zum Fortfahren LOG drücken");
             }
             else
             {
@@ -330,7 +354,7 @@ namespace Wer_wird_Millionear_zwei
             if(label23.Text=="1"||label23.Text=="6"||label23.Text=="8" ||label23.Text=="9")
             {
                 Coption.FillColor = Color.DarkGreen;
-
+                MessageBox.Show("Richtige Antwort, zum Fortfahren LOG drücken");
             }
             else
             {
@@ -344,6 +368,7 @@ namespace Wer_wird_Millionear_zwei
             if (label23.Text=="10"|| label23.Text=="7")
             {
                 Doption.FillColor = Color.DarkGreen;
+                MessageBox.Show("Richtige Antwort, zum Fortfahren LOG drücken");
             }
             else
             {
@@ -396,6 +421,11 @@ namespace Wer_wird_Millionear_zwei
             Aoption.Text = "";
             Boption.Text = "";
             pictureBox3.Visible = false;
+        }
+
+        private void label36_Click(object sender, EventArgs e)
+        {
+
         }
     }
      

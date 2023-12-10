@@ -79,6 +79,7 @@
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.label26 = new System.Windows.Forms.Label();
             this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             this.label35 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
@@ -93,7 +94,7 @@
             this.label29 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.guna2ShadowPanel1.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -119,6 +120,7 @@
             this.guna2CustomGradientPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.guna2CustomGradientPanel1.BorderRadius = 100;
             this.guna2CustomGradientPanel1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.guna2CustomGradientPanel1.Controls.Add(this.label36);
             this.guna2CustomGradientPanel1.Controls.Add(this.label24);
             this.guna2CustomGradientPanel1.Controls.Add(this.label23);
             this.guna2CustomGradientPanel1.CustomBorderColor = System.Drawing.Color.Transparent;
@@ -752,6 +754,16 @@
             this.panel11.Size = new System.Drawing.Size(208, 172);
             this.panel11.TabIndex = 12;
             // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(4, 14);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(25, 13);
+            this.label26.TabIndex = 16;
+            this.label26.Text = "<<<";
+            this.label26.Click += new System.EventHandler(this.label26_Click);
+            // 
             // guna2Button5
             // 
             this.guna2Button5.BorderRadius = 20;
@@ -897,15 +909,16 @@
             this.label27.Size = new System.Drawing.Size(203, 47);
             this.label27.TabIndex = 13;
             // 
-            // label26
+            // label36
             // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(4, 14);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(25, 13);
-            this.label26.TabIndex = 16;
-            this.label26.Text = "<<<";
-            this.label26.Click += new System.EventHandler(this.label26_Click);
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("SimSun", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.Location = new System.Drawing.Point(292, 86);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(245, 48);
+            this.label36.TabIndex = 2;
+            this.label36.Text = "Press LOG";
+            this.label36.Click += new System.EventHandler(this.label36_Click);
             // 
             // Form1
             // 
@@ -1030,6 +1043,7 @@
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label36;
     }
 }
 
